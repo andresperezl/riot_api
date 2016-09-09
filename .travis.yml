@@ -1,0 +1,45 @@
+---
+
+sudo: false
+
+cache:
+  directories:
+    - vendor/bundle
+
+language: ruby
+
+install:
+  - gem update --system --no-document || test true
+  - gem install bundler --no-document || test true
+  - bundle install --jobs 3 --retry 3
+
+before_script:
+  - git config --local user.email 'travis@travis.ci'
+  - git config --local user.name 'Travis CI'
+
+script:
+  - bundle exec rake clobber compile test sign_hooks overcommit
+
+rvm:
+  - 2.1.10
+  - 2.1.10-clang
+  - 2.2.5
+  - 2.2.5-clang
+  - 2.3.1
+  - 2.3.1-clang
+  - ruby-head
+  - ruby-head-clang
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: ruby-head-clang
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
