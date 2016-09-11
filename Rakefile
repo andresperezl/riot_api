@@ -2,7 +2,7 @@ require 'bundler/setup'
 require_relative './lib/riot_api/version'
 
 namespace :ruby do
-  Bundler::GemHelper.install_tasks(:name => 'riot-api')
+  Bundler::GemHelper.install_tasks(:name => 'riotapi')
 end
 
 require "rspec/core/rake_task"
