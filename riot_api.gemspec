@@ -5,7 +5,7 @@ require 'riot_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'riot_api'
-  spec.version       = RiotApi::VERSION
+  spec.version       = RiotAPI::VERSION
   spec.authors       = ['Andres Perez']
   spec.email         = ['andres.a.perezleon@gmail.com']
 
