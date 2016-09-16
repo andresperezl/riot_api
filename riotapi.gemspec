@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'byebug', '~> 9.0'
 
   spec.add_runtime_dependency 'rest-client', '~> 2.0'
+  spec.add_runtime_dependency 'google-protobuf'
 end

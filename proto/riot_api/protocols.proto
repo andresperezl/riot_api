@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package riotAPI;
+
+import "riot_api/region.proto";
+import "riot_api/service.proto";
+import "riot_api/message.proto";
+import "riot_api/translation.proto";

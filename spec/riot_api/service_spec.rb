@@ -1,24 +1,19 @@
 require 'rspec'
 
-require 'riot_api'
-require 'riot_api/service'
-
 module RiotAPI
   describe Service do
     before do
-      @service = RiotAPI::Region.all[0].services[0]
+      @service = RiotAPI::Status.regions('euw').services.first
     end
 
     it 'should have the right sttributes' do
-      expect(Service.new).to respond_to(:slug, :incidents, :name, :status)
+      expect(@service.to_h).to include(:slug, :incidents, :name, :status)
     end
 
     describe '#incidents' do
       it 'should be an array of incidents' do
-        expect(@service.incidents).to be_a(Array).and all(be_a(Incident))
+        expect(@service.incidents).to be_a(Google::Protobuf::RepeatedField).and all(be_a(Incident))
       end
     end
-
-
   end
 end

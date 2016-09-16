@@ -1,11 +1,9 @@
-require 'riot_api/version'
-require 'riot_api/configuration'
 require 'riot_api/client'
-require 'riot_api/region'
-require 'riot_api/service'
-require 'riot_api/incident'
+require 'riot_api/configuration'
+require 'riot_api/protocols_pb'
+require 'riot_api/status'
 require 'riot_api/utils/parser'
-require 'riot_api/message'
+require 'riot_api/version'
 
 begin
   require 'byebug'

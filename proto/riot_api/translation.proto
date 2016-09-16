@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package riotAPI;
+
+message Translation{
+    string content = 1;
+    string locale = 2;
+    string updated_at = 3;
+    string heading = 4;
+}

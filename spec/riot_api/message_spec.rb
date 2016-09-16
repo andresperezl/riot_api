@@ -3,16 +3,17 @@ require 'rspec'
 module RiotAPI
   describe Message do
 
+    before do
+      @msg  = RiotAPI::Status.regions('euw').services.first.incidents.first.updates.first
+    end
+
     it 'should have attributes' do
-      expect(Message.new).to respond_to(:author, :content, :created_at, :id, :severity, :translations, :updated_at)
+      expect(@msg.to_h).to include(:author, :content, :created_at, :id, :severity, :translations, :updated_at)
     end
 
     describe "#translations" do
-      before do
-        @msg  = RiotAPI::Region.all.find{ |r| r.slug == 'euw' }.services[0].incidents[0].updates[0]
-      end
       it 'should contains an Array of translations' do
-        expect(@msg.translations).to be_a(Array).and all(be_a(Message::Translation))
+        expect(@msg.translations).to be_a(Google::Protobuf::RepeatedField).and all(be_a(Translation))
       end
     end
   end

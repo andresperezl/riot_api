@@ -3,7 +3,6 @@ require 'json'
 
 require 'riot_api'
 require 'riot_api/configuration'
-require 'riot_api/region'
 
 module RiotAPI
   class Client
