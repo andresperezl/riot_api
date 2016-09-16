@@ -1,5 +1,6 @@
 # RiotApi
-[![Gem Version](https://badge.fury.io/rb/riotapi.svg)](https://badge.fury.io/rb/riotapi)[![Build Status](https://travis-ci.org/andresperezl/riot_api.svg?branch=master)](https://travis-ci.org/andresperezl/riot_api)
+[![Gem Version](https://badge.fury.io/rb/riotapi.svg)](https://badge.fury.io/rb/riotapi)
+[![Build Status](https://travis-ci.org/andresperezl/riot_api.svg?branch=master)](https://travis-ci.org/andresperezl/riot_api)
 
 Gem to easily interact with the Riot API
 

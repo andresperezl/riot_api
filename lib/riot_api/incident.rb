@@ -4,10 +4,17 @@ require 'riot_api/message'
 
 module RiotAPI
   class Incident
-    attr_reader :active, :created_at, :id, :updates
+    attr_reader :created_at, :id, :updates
 
     def initialize(data = OpenStruct.new)
+      @active = data.active
+      @id = id
+      @created_at = data.created_at
       @updates = data.updates ? data.updates.map{ |u| Message.parse(u) } : []
+    end
+
+    def active?
+      @active
     end
 
     def self.parse(data)

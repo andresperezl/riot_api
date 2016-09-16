@@ -11,7 +11,7 @@ module RiotAPI
     end
 
     it 'should have attributes' do
-      expect(Incident.new).to respond_to(:active, :created_at, :id, :updates)
+      expect(Incident.new).to respond_to(:active?, :created_at, :id, :updates)
     end
 
     it '#updates' do
