@@ -4,11 +4,11 @@ module RiotAPI
   describe Status do
     describe "#regions" do
       it "should return an array of regions" do
-        expect(RiotAPI::Status.regions).to be_a(Array).and all(be_a(RiotAPI::Region))
+        expect(RiotAPI::Status.regions).to be_a(Array).and all(be_a(RiotAPI::Status::Region))
       end
 
       it "should return just one regions" do
-        expect(RiotAPI::Status.regions('na')).to be_a(RiotAPI::Region)
+        expect(RiotAPI::Status.regions('na')).to be_a(RiotAPI::Status::Region)
       end
 
       it "should return 2 regions" do

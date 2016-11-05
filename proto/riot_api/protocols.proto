@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package riotAPI;
 
-import "riot_api/region.proto";
-import "riot_api/service.proto";
-import "riot_api/message.proto";
-import "riot_api/translation.proto";
+import "riot_api/status/region.proto";
+import "riot_api/status/service.proto";
+import "riot_api/status/message.proto";
+import "riot_api/status/translation.proto";

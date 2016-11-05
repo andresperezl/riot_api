@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package riotAPI;
+package riotAPI.status;
 
-import "riot_api/translation.proto";
+import "riot_api/status/translation.proto";
 
 message Message{
     string author = 1;
@@ -10,6 +10,6 @@ message Message{
     string created_at= 3;
     string id = 4;
     string severity = 5;
-    repeated riotAPI.Translation translations = 6;
+    repeated riotAPI.status.Translation translations = 6;
     string updated_at = 7;
 }

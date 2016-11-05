@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package riotAPI.status;
+
+import "riot_api/status/incident.proto";
+
+message Service{
+    repeated riotAPI.status.Incident incidents = 1;
+    string name = 2;
+    string slug = 3;
+    string status = 4;
+}

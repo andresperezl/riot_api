@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package riotAPI.status;
+
+import "riot_api/status/message.proto";
+
+message Incident{
+    bool active = 1;
+    string created_at = 2;
+    string id = 4;
+    repeated riotAPI.status.Message updates = 5;
+}

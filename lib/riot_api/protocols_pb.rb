@@ -3,10 +3,10 @@
 
 require 'google/protobuf'
 
-require 'riot_api/region_pb'
-require 'riot_api/service_pb'
-require 'riot_api/message_pb'
-require 'riot_api/translation_pb'
+require 'riot_api/status/region_pb'
+require 'riot_api/status/service_pb'
+require 'riot_api/status/message_pb'
+require 'riot_api/status/translation_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
