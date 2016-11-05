@@ -9,7 +9,7 @@ rvm:
   - "2.0"
   - "2.1" # latest 2.1.x
   - "2.2" # latest 2.2.x
-  - "2.3" # latest 2.3.x
+  - "2.3.1" # latest 2.3.x
   - "ruby-head"
 script:
   bundle exec rake test
@@ -21,9 +21,9 @@ branches:
 # only on versions that actually work.
 # (last tested: 2016-04)
 matrix:
-  exclude:
-    - os: osx
-      rvm: '2.2'
+# exclude:
+#    - os: osx
+#      rvm: '2.2'
 #    - os: osx
 #      rvm: '2.3.1' # No 2.3.x at all
 #  include:
