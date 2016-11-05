@@ -4,7 +4,7 @@ module RiotAPI
   describe Incident do
 
     before do
-      @incident = RiotAPI::Status.regions('euw').services.first.incidents.first
+      @incident = RiotAPI::Status.regions('euw').services.find{ |s| s.incidents.size > 0 }.incidents.first
     end
 
     it 'should have attributes' do

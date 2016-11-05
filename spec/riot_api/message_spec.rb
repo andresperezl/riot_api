@@ -4,7 +4,7 @@ module RiotAPI
   describe Message do
 
     before do
-      @msg  = RiotAPI::Status.regions('euw').services.first.incidents.first.updates.first
+      @msg  = RiotAPI::Status.regions('euw').services.find{ |s| s.incidents.size > 0 }.incidents.first.updates.first
     end
 
     it 'should have attributes' do

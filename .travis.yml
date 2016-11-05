@@ -6,10 +6,10 @@ os:
   - linux
   - osx
 rvm:
-  - "2.0.0"
+  - "2.0"
   - "2.1" # latest 2.1.x
   - "2.2" # latest 2.2.x
-  - "2.3.1" # TODO: switch to "2.3" once travis fixes it
+  - "2.3" # latest 2.3.x
   - "ruby-head"
 script:
   bundle exec rake test
@@ -24,11 +24,11 @@ matrix:
   exclude:
     - os: osx
       rvm: '2.2'
-    - os: osx
-      rvm: '2.3.1' # No 2.3.x at all
-  include:
-    - os: osx
-      rvm: '2.2.2' # Travis OS X doesn't have 2.2 aliases
+#    - os: osx
+#      rvm: '2.3.1' # No 2.3.x at all
+#  include:
+#    - os: osx
+#      rvm: '2.2' # Travis OS X doesn't have 2.2 aliases
   allow_failures:
     - rvm: 'ruby-head'
   fast_finish: true
